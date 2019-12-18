@@ -28,3 +28,4 @@ for n in range (0,len(networks)):               # range from 0 to the last eleme
 print('\n'.join(HR_list))                       # prints as a string in next rows
 
 
+#TODO: zrob tu porzadek - funkcje. Merge to master, push. Zaloz nowy branch na zapisywanie do pliku
