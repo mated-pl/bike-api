@@ -21,8 +21,6 @@ networks = response2dict["networks"]            # all data in the response sits 
 
 
 
-#TODO: zrob tu porzadek - funkcje. Merge to master, push. Zaloz nowy branch na zapisywanie do pliku
-
 def country_filter(resp_dict, country):
     city_list = []
     for n in range (0,len(resp_dict)):                          # range from 0 to the last element
