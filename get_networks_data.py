@@ -12,16 +12,16 @@ response_json = response_to_json(response1.json())
 
 response1_to_dict = json.loads(response_json)        # converts json to dict
 networks = response1_to_dict["networks"]            # all data in the response sits in dict of single key ("networks")
+
 # print(networks[0])                              # key "networks" has 1 value - list of dict. Showing first
 # for n in range (50,60):                       # showing 10
 #     print(networks[n]['company'])
-
 # print(networks.items())                       # prints whole dictionary
 # print(networks[0]['location']['country'])       # prints: 1st item in networks, value for location, value for country
 
 
 
-def country_filter(resp_dict, country):
+def cities_from_country(resp_dict, country):
     city_list = []
     for n in range (0,len(resp_dict)):                          # range from 0 to the last element
         if resp_dict[n]['location']['country'] == country:
@@ -29,7 +29,7 @@ def country_filter(resp_dict, country):
     print('\n'.join(city_list))                                 # prints as a string in next rows
     return (city_list)
 
-# country_filter(networks,"HR")
+# cities_from_country(networks,"HR")
 
 
 
