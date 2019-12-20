@@ -1,9 +1,12 @@
 import requests, json, csv
+
 response1 = requests.get("http://api.citybik.es/v2/networks")
 print(response1.status_code)
+
 response_as_json = json.dumps(response1.json(), sort_keys=True, indent=3)      # converts resp to json
 json_to_dict = json.loads(response_as_json)        # converts json to dict
 networks = json_to_dict["networks"]                 # endpoint keeps all data in dict with 1 key:value pair
+
 
 def save_net_details (resp_as_dict, country):  # funkcja do zapisania api do pliku
     csv_file_name = str(country)+"_networks.csv"
@@ -31,5 +34,6 @@ def save_net_details (resp_as_dict, country):  # funkcja do zapisania api do pli
                 write_list.writerow(csv1_row)
             print(csv1_row)
             csv1_row = []
+
 
 save_net_details(networks,"HR")
