@@ -4,7 +4,7 @@ response1 = requests.get("http://api.citybik.es/v2/networks")
 print(response1.status_code)
 
 response_as_json = json.dumps(response1.json(), sort_keys=True, indent=3)      # converts json object (response1.json()) to json string
-json_to_dict = json.loads(response_as_json)        # converts json to dict
+json_to_dict = json.loads(response_as_json)        # converts json string to dict
 networks = json_to_dict["networks"]                 # endpoint keeps all data in dict with 1 key:value pair
 
 
