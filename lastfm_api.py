@@ -64,4 +64,6 @@ while page < pages_number:
         break
     page += 1
 
-print(results)      # TODO: why response does contain only status code???
+print(results)
+# TODO: why response does contain only status code???
+# TODO: continue with pandas steps from tutorial https://www.dataquest.io/blog/last-fm-api-python/﻿

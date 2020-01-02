@@ -37,3 +37,5 @@ def save_net_details (resp_as_dict, country):  # funkcja do zapisania api do pli
 
 
 save_net_details(networks,"HR")
+# TODO: next steps: get all bikes in certain distance from Rogoznica
+# TODO: practice POST requests
